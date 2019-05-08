@@ -7,7 +7,7 @@ RUN apt-get install --yes build-essential
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y xorg
 RUN apt-get install -y nano   
 RUN apt-get install -y npm
-RUN apt-get install libxkbcommon-x11-0
+RUN apt-get install -y libxkbcommon-x11-0
 RUN mkdir /app/
 COPY app/package.json  /app/package.json
 
@@ -17,3 +17,4 @@ RUN cd /app \
 
 COPY app /app
 
+ENTRYPOINT ["node","/app/app.js"]
