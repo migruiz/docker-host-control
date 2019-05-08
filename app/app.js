@@ -2,7 +2,8 @@
 
 const ioHook = require('iohook');
 
-ioHook.on('mousemove', event => {
+
+ioHook.on('mousedown', event => {
   console.log(event); // { type: 'mousemove', x: 700, y: 400 }
 });
 
