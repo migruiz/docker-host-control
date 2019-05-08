@@ -9,6 +9,7 @@ RUN apt-get install -y nano
 RUN apt-get install -y npm
 RUN apt-get install -y libxkbcommon-x11-0
 RUN apt-get install -y htop
+RUN apt-get install -y psmisc
 RUN mkdir /app/
 COPY app/package.json  /app/package.json
 
